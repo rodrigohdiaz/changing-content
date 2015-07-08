@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+<title>Learning JQuery</title>
+
+<meta charset="utf-8" />
+<meta http-equiv="Content-type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<script type="text/javascript" src="jquery.min.js"></script>
+
+<style type="text/css">
+.square {
+	height: 200px;
+	width: 200px;
+	background-color: red;
+	margin-bottom: 20px;
+}
+
+.square2 {
+	height: 200px;
+	width: 200px;
+	background-color: yellow;
+	margin-bottom: 20px;
+}
+
+#circle {
+	height: 200px;
+	width: 200px;
+	background-color: green;
+	border-radius: 100%;
+}
+
+#circle2 {
+	height: 200px;
+	width: 200px;
+	background-color: blue;
+	border-radius: 100%;
+}
+
+#circle3 {
+	height: 200px;
+	width: 200px;
+	background-color: gray;
+	border-radius: 100%;
+}
+</style>
+
+</head>
+
+<body>
+
+	<div id="circle"></div>
+	<p>This is some text</p>
+	<div id="circle2"></div>
+	<h4>This is some text</h4>
+	<div class="square"></div>
+	<h3>This is another text</h3>
+	<div class="square2"></div>
+	<h3 id="text">And some more text</h3>
+	<div id="circle3"></div>
+	<iframe src="http://www.cnn.com"></iframe>
+
+
+	<script>
+		$("#circle").click(function() {
+			$("p").html("The text has been changed!");
+		});
+		$("#circle2").hover(function() {
+			$("h4").html("Changed!");
+		});
+
+		$(".square").click(function() {
+			alert($("h3").html());
+		});
+
+		$(".square2").click(function() {
+			$("text").html(alert("what about this?"));
+		});
+
+		$("#circle3").hover(function() {
+			$("iframe").attr("src", "http://www.bbc.com");
+		});
+	</script>
+
+
+</body>
+</html>
